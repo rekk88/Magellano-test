@@ -53,14 +53,14 @@ if (substr($input,0,1) === "/" && preg_match('~[0-9]~', $input) !== 1) {
   $path1 = new Path($input);
 
   //output the created object
-  var_dump($path1);
+  echo "old path : " . $path1->currentPath . "\n";
 
   //call the Path class function to change directory 
 
   $path1->cd("../Z");
 
   //output the new directory
-  var_dump($path1);
+  echo "new path :  " . $path1->currentPath;
 }
 else{
   echo "path name must start with '/' and not have numbers";
